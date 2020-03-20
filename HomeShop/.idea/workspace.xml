@@ -33,6 +33,26 @@
       <recent name="com.cursan.HomeShop" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cursan.HomeShop.Main" />
+      <module name="HomeShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cursan.HomeShop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -51,11 +71,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1584608517906" />
-    <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser" timestamp="1584695943780">
+    <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser" timestamp="1584710619641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584695943780" />
+    <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584710619641" />
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584695653101" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584707410859">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584707410859" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1584716567106">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584716567106" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1584716567106">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584716567106" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1584716567106">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584716567106" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1584716567106">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584716567106" />
     <state x="277" y="56" key="SettingsEditor" timestamp="1584624284725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

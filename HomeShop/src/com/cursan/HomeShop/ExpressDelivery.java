@@ -18,4 +18,8 @@ public class ExpressDelivery implements Delivery {
         }
     }
 
+    @Override
+    public String getInfo() {
+        return "Livraison express";
+    }
 }
