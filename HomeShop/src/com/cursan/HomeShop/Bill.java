@@ -6,23 +6,23 @@ import java.util.Map;
 public class Bill {
 
     private Customer customers;
-    private Map<String, Integer> products = new HashMap<>();
+    private Map<Product, Integer> products = new HashMap<>();
+    private Delivery delivery;
 
-    public Bill(Customer customers, Map<String, Integer> products) {
+    public Bill(Customer customers, Delivery delivery) {
         this.customers = customers;
-        this.products = products;
+        this.delivery = delivery;
     }
 
     public Customer getCustomers() {
         return customers;
     }
 
-    public Map<String, Integer> getProducts() {
+    public Map<Product, Integer> getProducts() {
         return products;
     }
 
-    public void addProduct(Product produit, Integer quantity) {
-
-
+    public void addProduct(Product product, int quantity) {
+            this.products.put(product, quantity);
     }
 }

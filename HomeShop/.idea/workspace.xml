@@ -10,6 +10,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -50,18 +51,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1584608517906" />
-    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1584626275440">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser" timestamp="1584695943780">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584623487367" />
-    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584626275440" />
+    <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584695943780" />
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584695653101" />
     <state x="277" y="56" key="SettingsEditor" timestamp="1584624284725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584624284725" />
-    <state x="463" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584623984559">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="579" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1584693204440">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584623984559" />
+    <state x="579" y="298" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584693204440" />
+    <state x="731" y="224" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584694587552">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="224" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584694587552" />
   </component>
 </project>
