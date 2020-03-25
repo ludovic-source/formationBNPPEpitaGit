@@ -1,5 +1,8 @@
 package com.ocr.ludovic;
 
+import java.awt.*;
+import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Order {
@@ -9,9 +12,34 @@ public class Order {
     public final String[] side = {"légumes frais", "frites", "riz", "tout"};
     public final String[] boisson = {"eau plate", "eau gazeuse", "soda"};
 
-    /**
-     * Display all available menus in the restaurant.
-     */
+    public void runMenu() {
+        /* Order commande = new Order(); */ // inutile si on utilise le pré fixe this. à la place du nom de l'objet
+
+        int choixMenu;
+        int choixAccompagnement;
+        int choixBoisson;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Combien de menu souhaitez-vous ?");
+        int nbreMenu;
+        try {
+            nbreMenu = sc.nextInt();
+
+            for (int i = 1; i <= nbreMenu; i++) {
+                choixMenu = Interaction.askSomething("menu", menu);
+                choixAccompagnement = Interaction.askSomething("accompagnement", side);
+                if (choixMenu == 1 || choixMenu == 3) {
+                    choixBoisson = Interaction.askSomething("boisson", boisson);
+                }
+            }
+        } catch (InputMismatchException ex) {
+            System.out.println("il faut saisir un nombre !!!, recommencez : ");
+            // ex.printStackTrace();
+            // nbreMenu = sc.nextInt();
+        }
+
+    }
+
     public void displayAvailableMenus() {
 
         System.out.println("Choix menu");
@@ -22,35 +50,9 @@ public class Order {
 
     }
 
-    /**
-     * Display a selected menu.
-     * @param nbMenu The selected menu.
-     */
     public void displaySelectedMenu(int nbMenu) {
         menuChoisi = nbMenu;
         System.out.println("Vous avez choisi le menu " + menu[menuChoisi-1]);
-    }
-
-    public void runMenu() {
-        /* Order commande = new Order(); */ // inutile si on utilise le pré fixe this. à la place du nom de l'objet
-
-        this.displayAvailableMenus();
-
-        // choix du menu
-        Scanner sc = new Scanner(System.in);
-        int menuChoisi = sc.nextInt();
-        this.displaySelectedMenu(menuChoisi);
-
-        // choix de l'accompagnement
-        this.displayAvailableSide();
-        this.displaySelectedSide(sc.nextInt());
-
-        // choix de la boisson
-        if (menuChoisi != 2) {
-            this.displayAvailableBoisson();
-            this.displaySelectedBoisson(sc.nextInt());
-        }
-
     }
 
     public void displaySelectedBoisson(int choixBoisson) {
@@ -84,5 +86,7 @@ public class Order {
         System.out.println("Vous avez choisi comme accompagnement : " + side[numberSide-1]);
 
     }
+
+
 
 }
