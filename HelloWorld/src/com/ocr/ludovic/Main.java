@@ -7,8 +7,7 @@ public class Main {
 
 	    Order commande = new Order();
 
-	    commande.displayAvailableMenus();
-	    commande.displaySelectedMenu(3);
+	    commande.runMenu();
 
     }
 }

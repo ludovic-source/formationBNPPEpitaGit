@@ -1,5 +1,7 @@
 package com.ocr.ludovic;
 
+import java.util.Scanner;
+
 public class Order {
 
     private final String[] menu = {"poulet", "boeuf", "végétarien"};
@@ -25,6 +27,18 @@ public class Order {
     public void displaySelectedMenu(int nbMenu) {
         menuChoisi = nbMenu;
         System.out.println("Vous avez choisi le menu " + menu[menuChoisi-1]);
+    }
+
+    public void runMenu() {
+        /* Order commande = new Order(); */ // inutile si on utilise le pré fix this. à la place du nom de l'objet
+
+        this.displayAvailableMenus();
+
+        Scanner sc = new Scanner(System.in);
+        int menuChoisi = sc.nextInt();
+
+        this.displaySelectedMenu(menuChoisi);
+
     }
 
 }
