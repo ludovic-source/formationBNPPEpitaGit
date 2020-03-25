@@ -2,15 +2,18 @@ package com.ocr.ludovic;
 
 public class Order {
 
+    private final String[] menu = {"poulet", "boeuf", "végétarien"};
+    private int menuChoisi;
+
     /**
      * Display all available menus in the restaurant.
      */
     public void displayAvailableMenus() {
 
         System.out.println("Choix menu");
-        System.out.println("1 - poulet ");
-        System.out.println("2 - boeuf ");
-        System.out.println("3 - végétarien ");
+        for (int i = 0; i < menu.length; i++) {
+            System.out.println(i+1 + " - " + menu[i]);
+        }
         System.out.println("Que souhaitez-vous comme menu ?");
 
     }
@@ -20,7 +23,8 @@ public class Order {
      * @param nbMenu The selected menu.
      */
     public void displaySelectedMenu(int nbMenu) {
-        System.out.println("Vous avez choisi le menu " + nbMenu);
+        menuChoisi = nbMenu;
+        System.out.println("Vous avez choisi le menu " + menu[menuChoisi-1]);
     }
 
 }
