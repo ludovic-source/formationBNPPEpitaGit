@@ -1,12 +1,13 @@
 homeshop2\Bill.class
 homeshop2\Fridge.class
+homeshop2\Television.class
+homeshop2\web\BillServlet.class
+homeshop2\ExpressDelivery.class
+homeshop2\Delivery.class
 homeshop2\Product.class
 homeshop2\TakeAwayDelivery.class
 homeshop2\web\HelloWorldServlet.class
-homeshop2\Television.class
-homeshop2\ExpressDelivery.class
 homeshop2\Customer.class
 homeshop2\DirectDelivery.class
-homeshop2\Delivery.class
 homeshop2\Main.class
 homeshop2\RelayDelivery.class
