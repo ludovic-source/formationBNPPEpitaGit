@@ -4,6 +4,7 @@ homeshop2\Television.class
 homeshop2\web\BillServlet.class
 homeshop2\ExpressDelivery.class
 homeshop2\Delivery.class
+homeshop2\dao\ProductDAO.class
 homeshop2\Product.class
 homeshop2\TakeAwayDelivery.class
 homeshop2\web\HelloWorldServlet.class

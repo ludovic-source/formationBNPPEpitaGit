@@ -1,6 +1,7 @@
 package homeshop2.web;
 
 import homeshop2.*;
+import homeshop2.dao.ProductDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,12 +24,7 @@ public class BillServlet extends HttpServlet {
         // Cette méthode est utilisée une fois au début. Elle permet d'initialiser le contexte.
         // Pour générer le formulaire, il faut la liste des produits (elle est affichée avant le formulaire)
 
-        Product cafe = new Product("Philips HD7866/61", "Philips SENSEO Quadrante, Noir - 1 ou 2 tasses", 79.99);
-        Product tv = new Television("TV Samsung UE49MU6292", "Smart TV LED incurvée 49\"", 599.00, 49, "LED");
-        Fridge fridge = new Fridge("BEKO TSE 1042 F", "Réfrigérateur BEKO 130L - Classe A+ - blanc", 189.00, 130, false);
-        products.add(cafe);
-        products.add(tv);
-        products.add(fridge);
+        products = new ProductDAO().getAll();
     }
 
     @Override
