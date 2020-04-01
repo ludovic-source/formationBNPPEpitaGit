@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bibliotheque (livre)*>
+<!ELEMENT livre (titre,auteur)>
+<!ATTLIST livre genre (fiction|drame|policier|aventure) #REQUIRED>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT auteur (#PCDATA)>

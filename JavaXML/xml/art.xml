@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<galeries>
+    xs:noNamespaceSchemaLocation="art.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    <galerie adresse="PARIS">
+        <gerant></gerant>
+        <contenu>
+            <type>Peinture realisme americain</type>
+            <auteur>Edward Hopper</auteur>
+            <titre></titre>
+            <prix>caca</prix>
+        </contenu>
+    </galerie>
+</galeries>

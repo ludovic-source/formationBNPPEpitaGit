@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bibliotheque SYSTEM "bibliotheque.dtd">
+
+<bibliotheque>
+    <livre genre="aventure">
+        <titre>Les confessions</titre>
+        <auteur>Jean Jacques Rousseau</auteur>
+    </livre>
+</bibliotheque>
