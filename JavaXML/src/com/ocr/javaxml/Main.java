@@ -60,19 +60,8 @@ public class Main {
                     // cet élément sera la racine du document
                     Element root = xml.getDocumentElement();
 
-                    // pour afficher racine
-                    System.out.println(root.getNodeName());
-
                     // pour afficher tous les noeuds parents + enfants
                     System.out.println(description(root, ""));
-
-                    // pour afficher les enfants du noeud <racine> uniquement
-                    NodeList nodes = root.getChildNodes();
-                    int nbNode = nodes.getLength();
-                    for(int i = 0; i < nbNode; i++){
-                        Node n = nodes.item(i);
-                        System.out.println("* Enfant N°" + (i+1) + " : " + n.getNodeName() + " - " + n.getNodeValue());
-                    }
 
                 } catch (SAXParseException e){}
 
@@ -94,25 +83,20 @@ public class Main {
         */
     }
 
-    /**
-     * Méthode qui va parser le contenu d'un nœud
-     * @param n
-     * @param tab
-     * @return
-     */
     public static String description(Node n, String tab){
         String str = new String();
+
         //Nous nous assurons que le nœud passé en paramètre est une instance d'Element
         //juste au cas où il s'agisse d'un texte ou d'un espace, etc.
         if(n instanceof Element){
 
             //Nous sommes donc bien sur un élément de notre document
-            //Nous castons l'objet de type Node en type Element
-            Element element = (Element)n;
 
+            String tab2 = tab;
             //Nous pouvons récupérer le nom du nœud actuellement parcouru
             //grâce à cette méthode, nous ouvrons donc notre balise
-            str += "<" + n.getNodeName();
+            str += tab2 + n.getNodeName() + "\n";
+            tab2 = "   " + tab2;
 
             //nous contrôlons la liste des attributs présents
             if(n.getAttributes() != null && n.getAttributes().getLength() > 0){
@@ -125,23 +109,22 @@ public class Main {
                 for(int j = 0; j < nbAtt; j++){
                     Node noeud = att.item(j);
                     //On récupère le nom de l'attribut et sa valeur grâce à ces deux méthodes
-                    str += " " + noeud.getNodeName() + "=\"" + noeud.getNodeValue() + "\" ";
+                    str += tab2 + "ATTRIBUT : " + noeud.getNodeName() + "=" + noeud.getNodeValue() + "\n";
                 }
-            }
 
-            //nous refermons notre balise car nous avons traité les différents attributs
-            str += ">";
+            }
 
             //La méthode getChildNodes retournant le contenu du nœud + les nœuds enfants
             //Nous récupérons le contenu texte uniquement lorsqu'il n'y a que du texte, donc un seul enfant
-            if(n.getChildNodes().getLength() == 1)
-                str += n.getTextContent();
+            if(n.getChildNodes().getLength() == 1) {
+                str += tab2 + "VALEUR : " + n.getTextContent() + "\n";
+            }
 
             //Nous allons maintenant traiter les nœuds enfants du nœud en cours de traitement
             int nbChild = n.getChildNodes().getLength();
+
             //Nous récupérons la liste des nœuds enfants
             NodeList list = n.getChildNodes();
-            String tab2 = tab + "\t";
 
             //nous parcourons la liste des nœuds
             for(int i = 0; i < nbChild; i++){
@@ -150,15 +133,10 @@ public class Main {
                 //si le nœud enfant est un Element, nous le traitons
                 if (n2 instanceof Element){
                     //appel récursif à la méthode pour le traitement du nœud et de ses enfants
-                    str += "\n " + tab2 + description(n2, tab2);
+                    str += description(n2, tab2);
                 }
             }
 
-            //Nous fermons maintenant la balise
-            if(n.getChildNodes().getLength() < 2)
-                str += "</" + n.getNodeName() + ">";
-            else
-                str += "\n" + tab +"</" + n.getNodeName() + ">";
         }
 
         return str;
