@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bibliotheque SYSTEM "maDtdBibon.dtd">
+<bibliotheque>
+<livre auteur="M@teo21">
+<titre>Apprenez à programmer en C</titre>
+</livre>
+<livre auteur="cysboy">
+<titre>Apprenez à programmer en Java</titre>
+</livre>
+</bibliotheque>

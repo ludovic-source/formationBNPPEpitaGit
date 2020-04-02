@@ -21,7 +21,7 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="RunManager" selected="Application.MainXPATH">
+  <component name="RunManager" selected="Application.MainCreationXML">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.ocr.javaxml.Main" />
       <module name="JavaXML" />
@@ -34,6 +34,19 @@
     </configuration>
     <configuration name="MainAvecArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ocr.javaxml.MainAvecArrayList" />
+      <module name="JavaXML" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocr.javaxml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainCreationXML" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ocr.javaxml.MainCreationXML" />
       <module name="JavaXML" />
       <extension name="coverage">
         <pattern>
@@ -60,6 +73,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainCreationXML" />
         <item itemvalue="Application.MainXPATH" />
         <item itemvalue="Application.MainAvecArrayList" />
         <item itemvalue="Application.Main" />
@@ -84,25 +98,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585673168140" />
-    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1585816086572">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="242" key="GridCell.Tab.0.bottom" timestamp="1585831616437">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585750257547" />
+    <state width="1493" height="242" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585831616437" />
     <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585816086572" />
-    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1585816086572">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="242" key="GridCell.Tab.0.center" timestamp="1585831616437">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585750257546" />
+    <state width="1493" height="242" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585831616437" />
     <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585816086572" />
-    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1585816086572">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="242" key="GridCell.Tab.0.left" timestamp="1585831616437">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585750257546" />
+    <state width="1493" height="242" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585831616437" />
     <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585816086572" />
-    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1585816086572">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="242" key="GridCell.Tab.0.right" timestamp="1585831616437">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585750257546" />
+    <state width="1493" height="242" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585831616437" />
     <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585816086572" />
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1585812908089">
       <screen x="0" y="0" width="1920" height="1040" />
