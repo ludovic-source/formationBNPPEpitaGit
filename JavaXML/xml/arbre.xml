@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <!DOCTYPE racine SYSTEM "arbre.dtd"> -->
+<!DOCTYPE racine SYSTEM "arbre.dtd">
 
 <racine>
     <!-- xs:noNamespaceSchemaLocation="arbre.xsd"
