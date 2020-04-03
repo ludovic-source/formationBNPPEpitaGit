@@ -28,10 +28,6 @@ public class MainSAX {
 
             System.out.println(racine);
 
-            // juste pour tester la methode surchargée toString()
-            Test test = new Test("titi");
-            System.out.println(test);
-
         } catch (DOMException e) {
             e.printStackTrace();
         } catch (ParserConfigurationException e) {
