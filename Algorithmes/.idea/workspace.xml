@@ -24,7 +24,7 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="RunManager" selected="Application.MainAnagrammesP35">
+  <component name="RunManager" selected="Application.MainTextSur9TouchesP36">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.ludovic.algorithmes.Main" />
       <module name="Algorithmes" />
@@ -37,6 +37,19 @@
     </configuration>
     <configuration name="MainAnagrammesP35" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ludovic.algorithmes.MainAnagrammesP35" />
+      <module name="Algorithmes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ludovic.algorithmes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTextSur9TouchesP36" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ludovic.algorithmes.MainTextSur9TouchesP36" />
       <module name="Algorithmes" />
       <extension name="coverage">
         <pattern>
@@ -61,14 +74,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TextSur9TouchesP36" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ludovic.algorithmes.TextSur9TouchesP36" />
+      <module name="Algorithmes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ludovic.algorithmes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.MainAnagrammesP35" />
       <item itemvalue="Application.Mainbis" />
+      <item itemvalue="Application.TextSur9TouchesP36" />
+      <item itemvalue="Application.MainTextSur9TouchesP36" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainTextSur9TouchesP36" />
         <item itemvalue="Application.MainAnagrammesP35" />
+        <item itemvalue="Application.TextSur9TouchesP36" />
         <item itemvalue="Application.Mainbis" />
       </list>
     </recent_temporary>
@@ -87,75 +117,70 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1585924022389">
+    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1586280883992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585924022389" />
-    <state width="1493" height="140" key="GridCell.Tab.0.bottom" timestamp="1585995761342">
+    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586280883992" />
+    <state x="690" y="268" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1586268631908">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="268" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586268631908" />
+    <state width="1877" height="139" key="GridCell.Tab.0.bottom" timestamp="1586347349700">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586341258322" />
+    <state width="1877" height="139" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586347349700" />
+    <state width="1877" height="139" key="GridCell.Tab.0.center" timestamp="1586347349700">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586341258322" />
+    <state width="1877" height="139" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586347349700" />
+    <state width="1877" height="139" key="GridCell.Tab.0.left" timestamp="1586347349700">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586341258321" />
+    <state width="1877" height="139" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586347349700" />
+    <state width="1877" height="139" key="GridCell.Tab.0.right" timestamp="1586347349700">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586341258322" />
+    <state width="1877" height="139" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586347349700" />
+    <state width="1493" height="329" key="GridCell.Tab.1.bottom" timestamp="1586341258323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="140" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585995761342" />
-    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585989172151" />
-    <state width="1493" height="140" key="GridCell.Tab.0.center" timestamp="1585995761342">
+    <state width="1493" height="329" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586341258323" />
+    <state width="1877" height="349" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586336037495" />
+    <state width="1493" height="329" key="GridCell.Tab.1.center" timestamp="1586341258322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="140" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585995761342" />
-    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585989172151" />
-    <state width="1493" height="140" key="GridCell.Tab.0.left" timestamp="1585995761341">
+    <state width="1493" height="329" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586341258322" />
+    <state width="1877" height="349" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586336037495" />
+    <state width="1493" height="329" key="GridCell.Tab.1.left" timestamp="1586341258322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="140" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585995761341" />
-    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585989172151" />
-    <state width="1493" height="140" key="GridCell.Tab.0.right" timestamp="1585995761342">
+    <state width="1493" height="329" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586341258322" />
+    <state width="1877" height="349" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586336037495" />
+    <state width="1493" height="329" key="GridCell.Tab.1.right" timestamp="1586341258323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="140" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585995761342" />
-    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585989172151" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1585994602489">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585994602489" />
-    <state width="1877" height="231" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585988909094" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1585994602489">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585994602489" />
-    <state width="1877" height="231" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585988909094" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1585994602489">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585994602489" />
-    <state width="1877" height="231" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585988909094" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1585994602489">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585994602489" />
-    <state width="1877" height="231" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585988909094" />
-    <state x="525" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1585993255595">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="329" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586341258323" />
+    <state width="1877" height="349" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586336037495" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1586330419385">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="525" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585993255595" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585987362304" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586330419385" />
+    <state x="666" y="140" key="refactoring.ChangeSignatureDialog" timestamp="1586259182677">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="140" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586259182677" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/ludovic/algorithmes/MainAnagrammesP35.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/ludovic/algorithmes/MainAnagrammesP35.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/ludovic/algorithmes/MainAnagrammesP35.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="mapCorrespondances.entrySet().toArray()[1]" />
+        <watch expression="setDictionnaire" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
