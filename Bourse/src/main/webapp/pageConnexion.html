@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="styleBourse.css">
+		<title>La Bourse de Saint-Malo - écran de connexion</title>
+	</head>
+
+	<body>
+
+		<header>
+			<div id="bloc_logo">
+				<img src="images/logo.jpg" alt="logo" title="image du logo" id="logo">
+				<h1>Bourse de Saint Malo</h1>
+			</div>
+			
+			<!-- à récupérer via la servlet java -->
+			<div id="reference_client">
+				<p id="date">10/04/2020</p>
+			</div>	
+		</header>
+
+		<!-- affichage du bandeau permanent -->
+		<div id="bandeau">
+			<div id="bandeau_description">
+				Vue panoramique de Saint-Malo
+			</div>	
+		</div>	
+
+		<nav>
+			<div class="menu"><a href="index.html">ACCUEIL</a></div>
+			<div class="menu"><a href="pageListeDesCours.html">LISTE DES COURS</a></div>
+			<div class="menu"><a href="pageOrdre.html">ORDRE DE BOURSE</a></div>
+		</nav>
+
+		<section>
+			<aside id="formulaire_connexion">
+				<form method="get" action="seConnecter.java">
+					<fieldset>
+						<legend>Information pour se connecter</legend>
+						<p>
+							<label for="identifiantClient">IDENTIFIANT (4 chiffres)</label> : <input type="text" name="identifiantClient" id="identifiantClient" size="4" maxlength="4" placeholder="****">
+						</p>
+					</fieldset>
+					<p class="bouton_formulaire"><input type="submit" value="se connecter"><p>
+				</form>
+			</aside>
+
+		</section>
+
+	</body>
+
+</html>
