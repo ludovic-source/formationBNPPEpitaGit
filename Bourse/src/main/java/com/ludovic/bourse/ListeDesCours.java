@@ -1,30 +1,20 @@
 package com.ludovic.bourse;
 
 import com.ludovic.bourse.dao.ActionDAO;
-import com.ludovic.bourse.dao.ClientDAO;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.ArrayList;
 
-public class Main {
+public class ListeDesCours {
 
-    public static void main(String[] args) {
-	// write your code here
+    private ArrayList<String> listeDesCours = new ArrayList<>();
 
-        //String identifiantSaisiString = "7";
-        //int identifiantSaisi = Integer.parseInt(identifiantSaisiString);
-        //Client client = new Client();
-        //client = new ClientDAO().getClient(identifiantSaisi);
+    public void importerFichierDesCours() {
 
-        //System.out.println("identifiant : " + client.getIdentifiant());
-        //System.out.println("nom : " + client.getNom());
-        //System.out.println("prénom : " + client.getPrenom());
 
         Path path = Paths.get("C:/Users/stagiaire/IdeaProjects/Bourse/src/main/java/com/ludovic/bourse/fichierDesCours.csv");
         System.out.println(path.toAbsolutePath());
@@ -58,7 +48,7 @@ public class Main {
 
     }
 
-    private static void chargerAction(String ligneAction) {
+    private void chargerAction(String ligneAction) {
 
         // format fichier = "Valeur","Dernier","Var. %","+Haut","+Bas","Volumes","31 Dec."
         String[] tableauAction = ligneAction.split("[,]");

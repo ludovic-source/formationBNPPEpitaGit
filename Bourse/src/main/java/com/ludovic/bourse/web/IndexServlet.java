@@ -6,14 +6,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class IndexServlet extends HttpServlet {
+
+    SimpleDateFormat format = new SimpleDateFormat("'le' dd/MM/yyyy 'à' hh:mm:ss aaa");
+    Date date = new Date();
 
     @Override
     public void init() throws ServletException {
 
         // C'est la méthode qui va être appelée par Jetty quand il va instancier un objet de type  HttpServlet.
         // Cette méthode est utilisée une fois au début. Elle permet d'initialiser le contexte.
-        // Pour générer la page d'index, nous n'avons pas besoin d'informations dynamiques
+        // Pour générer la page d'index, nous n'avons pas besoin d'informations préalable
 
     }
 
@@ -28,23 +34,23 @@ public class IndexServlet extends HttpServlet {
     private void displayIndex(HttpServletResponse resp) throws IOException {
 
         String pageHTML = "<!DOCTYPE html>" +
-                    "<html>" +
-                        "<head>" +
-                            "<meta charset=\"utf-8\" />" +
-                            "<link rel=\"stylesheet\" href=\"styleBourse.css\">" +
-                            "<title>La Bourse de Saint-Malo - accueil</title>" +
-                        "</head>"+
-                       "<body>"+
+                "<html>" +
+                "<head>" +
+                "<meta charset=\"utf-8\" />" +
+                "<link rel=\"stylesheet\" href=\"styleBourse.css\">" +
+                "<title>La Bourse de Saint-Malo - accueil</title>" +
+                "</head>" +
+                "<body>" +
 
-                            "<header>"+
-                                "<div id=\"bloc_logo\">"+
-                                    "<img src=\"images/logo.jpg\" alt=\"logo\" title=\"image du logo\" id=\"logo\">"+
-                                    "<h1>Bourse de Saint Malo</h1>"+
-                                "</div>"+
+                "<header>" +
+                "<div id=\"bloc_logo\">" +
+                "<img src=\"images/logo.jpg\" alt=\"logo\" title=\"image du logo\" id=\"logo\">" +
+                "<h1>Bourse de Saint Malo</h1>" +
+                "</div>" +
 
-                                "<div id=\"reference_client\">"+
-                                    "<p id=\"date\">10/04/2020</p>"+
-                                    "<p id=\"nom\"><strong><a href=\"pageConnexion.html\">Se connecter</a></strong></p>"+
+                "<div id=\"reference_client\">" +
+                "<p id=\"date\">" + format.format(date) + "</p>"+
+                                    "<p id=\"nom\"><strong><a href=\"pageConnexion\">Se connecter</a></strong></p>"+
                                 "</div>"+
                             "</header>"+
                             "<!-- affichage du bandeau permanent -->"+

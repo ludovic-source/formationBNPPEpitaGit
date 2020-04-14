@@ -8,8 +8,20 @@
         <servlet-class>com.ludovic.bourse.web.IndexServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>PageConnexion</servlet-name>
+        <servlet-class>com.ludovic.bourse.web.PageConnexionServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>PageConnexion</servlet-name>
+        <url-pattern>/pageConnexion</url-pattern>
+    </servlet-mapping>
+
 </web-app>
