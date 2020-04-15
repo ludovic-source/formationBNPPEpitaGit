@@ -184,3 +184,13 @@ footer
 	/* background-color: rgb(187,212,255); */
 }
 
+table
+{
+    border-collapse: collapse;
+}
+
+th, td
+{
+    border: 1px solid blue;
+}
+

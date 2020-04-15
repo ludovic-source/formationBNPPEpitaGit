@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -34,7 +35,7 @@ public class PageConnexionServlet extends HttpServlet {
             displayForm(resp);                  // pas de paramètres, on affiche le formulaire à remplir
         }
         else {
-            displayConnexion(req, resp);         // pour afficher la facture correspondant au formulaire rempli
+            displayConnexion(req, resp);         // pour afficher la page d'accueil avec les infos clients
         }
     }
 
@@ -69,7 +70,7 @@ public class PageConnexionServlet extends HttpServlet {
 
                                 "<nav>"+
                                     "<div class=\"menu\"><a href=\"index.html\">ACCUEIL</a></div>"+
-                                    "<div class=\"menu\"><a href=\"pageListeDesCours.html\">LISTE DES COURS</a></div>"+
+                                    "<div class=\"menu\"><a href=\"listeDesCours\">LISTE DES COURS</a></div>"+
                                     "<div class=\"menu\"><a href=\"pageOrdre.html\">ORDRE DE BOURSE</a></div>"+
                                 "</nav>"+
 
@@ -104,8 +105,15 @@ public class PageConnexionServlet extends HttpServlet {
 
         System.out.println("identifiant lu" + identifiantSaisi);
 
+        // récupérer le nom et le prenom du client dans la base de données
         Client client = new ClientDAO().getClient(identifiantSaisi);
         String nomClient = client.getPrenom() + " " + client.getNom();
+
+        // sauvegarder l'identifiant pour les autres servlet dans le HttpSession
+        HttpSession session = req.getSession();
+        session.setAttribute("identifiant", client.getIdentifiant());
+        session.setAttribute("nom", client.getNom());
+        session.setAttribute("prenom", client.getPrenom());
 
         String form = "<!DOCTYPE html>" +
                 "<html>" +
@@ -136,7 +144,7 @@ public class PageConnexionServlet extends HttpServlet {
 
                 "<nav>"+
                 "<div class=\"menu\"><a href=\"index.html\">ACCUEIL</a></div>"+
-                "<div class=\"menu\"><a href=\"pageListeDesCours.html\">LISTE DES COURS</a></div>"+
+                "<div class=\"menu\"><a href=\"listeDesCours\">LISTE DES COURS</a></div>"+
                 "<div class=\"menu\"><a href=\"pageOrdre.html\">ORDRE DE BOURSE</a></div>"+
                 "</nav>"+
 

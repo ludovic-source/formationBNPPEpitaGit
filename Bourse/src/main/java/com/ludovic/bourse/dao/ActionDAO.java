@@ -4,6 +4,8 @@ import com.ludovic.bourse.Action;
 import com.ludovic.bourse.Client;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ActionDAO {
 
@@ -37,6 +39,31 @@ public class ActionDAO {
             e.printStackTrace();
         }
         return action;
+    }
+
+    // récupérer toutes les actions de la base de données
+    public ArrayList<Action> getAllActions() {
+
+
+        ArrayList<Action> ListeActions = new ArrayList<>();
+
+        // on recupère toutes les actions contenues dans la table mysql Action
+        try {
+            Connection connection = DriverManager.getConnection(url, user, pwd);
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT * FROM action");
+            while (rs.next()) {
+                Action action = new Action();
+                String libelle = rs.getString("libelle");
+                action.setLibelle(libelle);
+                float valeurCourante = rs.getFloat("valeur_courante");
+                action.setValeurCourante(valeurCourante);
+                ListeActions.add(action);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ListeActions;
     }
 
     // insérer/mettre à jour une action dans la table
