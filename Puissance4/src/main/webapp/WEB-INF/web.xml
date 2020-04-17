@@ -1,0 +1,26 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>IndexPuissance4</servlet-name>
+        <servlet-class>com.ludovic.puissance4.web.indexPuissance4Servlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>JeuPuissance4</servlet-name>
+        <servlet-class>com.ludovic.puissance4.web.jeuPuissance4Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IndexPuissance4</servlet-name>
+        <url-pattern>/indexPuissance4</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>JeuPuissance4</servlet-name>
+        <url-pattern>/jeuPuissance4</url-pattern>
+    </servlet-mapping>
+
+</web-app>

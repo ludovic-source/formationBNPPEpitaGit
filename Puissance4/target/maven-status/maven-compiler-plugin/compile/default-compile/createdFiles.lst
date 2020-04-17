@@ -1,0 +1,4 @@
+com\ludovic\puissance4\Main.class
+com\ludovic\puissance4\Plateau.class
+com\ludovic\puissance4\web\jeuPuissance4Servlet.class
+com\ludovic\puissance4\web\indexPuissance4Servlet.class
