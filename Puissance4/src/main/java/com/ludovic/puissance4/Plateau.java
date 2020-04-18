@@ -269,6 +269,8 @@ public class Plateau {
                         reponse.set(nbreDeCasesMemeCouleur, position);
                         if (nbreDeCasesMemeCouleur == 4) {
                             gagnantTrouve = true;
+                            reponse.set(0, couleurPrecedente);
+                            return reponse;
                         }
                     }
                 }
@@ -294,6 +296,8 @@ public class Plateau {
                         reponse.set(nbreDeCasesMemeCouleur, position);
                         if (nbreDeCasesMemeCouleur == 4) {
                             gagnantTrouve = true;
+                            reponse.set(0, couleurPrecedente);
+                            return reponse;
                         }
                     }
                 }
@@ -329,15 +333,42 @@ public class Plateau {
         String position = "";
 
         for (int departLigne = 3; departLigne < 6 && !gagnantTrouve; departLigne++ ) {
-            System.out.println("depart ligne = " + departLigne);
             int j = 0;
             nbreDeCasesMemeCouleur = 1;
             couleurPrecedente = plateauJeu[departLigne][0];
             position = departLigne + "0";
             reponse.set(1, position);
             for (int i = departLigne-1; i >= 0 && !gagnantTrouve; i--) {
-                System.out.println("couleur precedente : " + couleurPrecedente);
                 j++;
+                if (plateauJeu[i][j] == couleurPrecedente) {
+                    nbreDeCasesMemeCouleur ++;
+                    if (couleurPrecedente == "jaune" || couleurPrecedente == "rouge") {
+                        position = "" + i + j;
+                        reponse.set(nbreDeCasesMemeCouleur, position);
+                        if (nbreDeCasesMemeCouleur == 4) {
+                            gagnantTrouve = true;
+                            reponse.set(0, couleurPrecedente);
+                            return reponse;
+                        }
+                    }
+                }
+                else {
+                    nbreDeCasesMemeCouleur = 1;
+                    couleurPrecedente = plateauJeu[i][j];
+                }
+            }
+        }
+
+        for (int departLigne = 1; departLigne < 4 && !gagnantTrouve; departLigne++ ) {
+            System.out.println("depart ligne = " + departLigne);
+            int i = 5;
+            nbreDeCasesMemeCouleur = 1;
+            couleurPrecedente = plateauJeu[i][departLigne];
+            position = "5" + departLigne;
+            reponse.set(1, position);
+            for (int j = departLigne+1; j < 7 && !gagnantTrouve; j++) {
+                System.out.println("couleur precedente : " + couleurPrecedente);
+                i--;
                 if (plateauJeu[i][j] == couleurPrecedente) {
                     System.out.println("plateauJeu[i][j] : " + plateauJeu[i][j]);
                     nbreDeCasesMemeCouleur ++;
@@ -347,37 +378,14 @@ public class Plateau {
                         reponse.set(nbreDeCasesMemeCouleur, position);
                         if (nbreDeCasesMemeCouleur == 4) {
                             gagnantTrouve = true;
+                            reponse.set(0, couleurPrecedente);
+                            return reponse;
                         }
                     }
                 }
                 else {
                     nbreDeCasesMemeCouleur = 1;
                     System.out.println("nbreDeCasesMemeCouleur : " + nbreDeCasesMemeCouleur);
-                    couleurPrecedente = plateauJeu[i][j];
-                }
-            }
-        }
-
-        for (int departLigne = 0; departLigne < 4 && !gagnantTrouve; departLigne++ ) {
-            int i = 6;
-            nbreDeCasesMemeCouleur = 1;
-            couleurPrecedente = plateauJeu[i-1][departLigne];
-            position = "5" + departLigne;
-            reponse.set(1, position);
-            for (int j = departLigne+1; j >= 7 && !gagnantTrouve; j++) {
-                i--;
-                if (plateauJeu[i][j] == couleurPrecedente) {
-                    nbreDeCasesMemeCouleur ++;
-                    if (couleurPrecedente == "jaune" || couleurPrecedente == "rouge") {
-                        position = "" + i + j;
-                        reponse.set(nbreDeCasesMemeCouleur, position);
-                        if (nbreDeCasesMemeCouleur == 4) {
-                            gagnantTrouve = true;
-                        }
-                    }
-                }
-                else {
-                    nbreDeCasesMemeCouleur = 1;
                     couleurPrecedente = plateauJeu[i][j];
                 }
             }
