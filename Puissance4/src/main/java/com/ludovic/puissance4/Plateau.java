@@ -1,5 +1,7 @@
 package com.ludovic.puissance4;
 
+import java.util.ArrayList;
+
 public class Plateau {
 
     final private String celluleVideHTML = "<div class=\"celluleVide\">"+
@@ -92,4 +94,300 @@ public class Plateau {
 
     }
 
+    public ArrayList<String> verifierSiGagnant(String[][] plateauJeu) {
+
+        // la fonction retourne en position 0 les valeurs possibles suivantes :
+        //              jaune, rouge, finPartie (sans vainqueur), ou "" pour dire que la partie n'est pas finie
+        // les positiosns 1, 2, 3, et 4 indiquent cellules gagnantes
+        ArrayList<String> reponse = new ArrayList<>();
+
+        reponse = verifierHorizontales(plateauJeu);
+        if (reponse.get(0).equals("jaune") || reponse.get(0).equals("rouge")) {
+            return reponse;
+        }
+
+
+        reponse = verifierVerticales(plateauJeu);
+        if (reponse.get(0).equals("jaune") || reponse.get(0).equals("rouge")) {
+            return reponse;
+        }
+
+        reponse = verifierDiagonalesMontantes(plateauJeu);
+        if (reponse.get(0).equals("jaune") || reponse.get(0).equals("rouge")) {
+            return reponse;
+        }
+
+        reponse = verifierDiagonalesDescendantes(plateauJeu);
+        if (reponse.get(0).equals("jaune") || reponse.get(0).equals("rouge")) {
+            return reponse;
+        }
+
+        reponse = verifierFinDePartie(plateauJeu);
+        return reponse;
+
+    }
+
+    private ArrayList<String> verifierFinDePartie (String[][] plateauJeu) {
+
+        // la fonction retourne en position 0 les valeurs possibles suivantes :
+        //              "finPartie" si aucun gagnant ou "" pour dire que la partie n'est pas finie
+        ArrayList<String> reponse = new ArrayList<>();
+        reponse.add(0, "finPartie");
+
+        for (int chaqueColonne = 0; chaqueColonne < 7; chaqueColonne ++) {
+            if (plateauJeu[5][chaqueColonne] == null) {
+                reponse.set(0, "");
+                return reponse;
+            }
+        }
+        return reponse;
+
+    }
+
+    private ArrayList<String> verifierHorizontales (String[][] plateauJeu) {
+
+        // la fonction retourne en position 0 les valeurs possibles suivantes :
+        //              jaune, rouge, ou "" pour dire que la partie n'est pas finie
+        // les positions 1, 2, 3, et 4 indiquent cellules gagnantes
+        ArrayList<String> reponse = new ArrayList<>();
+        String couleurPrecedente = "";
+        int nbreDeCasesMemeCouleur = 1;
+        boolean gagnantTrouve = false;
+        reponse.add(0, "");
+        reponse.add(1,"");
+        reponse.add(2,"");
+        reponse.add(3,"");
+        reponse.add(4,"");
+        String position = "";
+
+        for (int chaqueLigne = 0; chaqueLigne < 6 && !gagnantTrouve; chaqueLigne++) {
+            nbreDeCasesMemeCouleur = 1;
+            couleurPrecedente = plateauJeu[chaqueLigne][0];
+            position = chaqueLigne + "0";
+            reponse.set(1, position);
+            for (int chaqueColonne = 1; chaqueColonne < 7 && !gagnantTrouve; chaqueColonne++) {
+                if (plateauJeu[chaqueLigne][chaqueColonne] == couleurPrecedente) {
+                    nbreDeCasesMemeCouleur ++;
+                    if (couleurPrecedente == "jaune" || couleurPrecedente == "rouge") {
+                        position = "" + chaqueLigne + chaqueColonne;
+                        reponse.set(nbreDeCasesMemeCouleur, position);
+                        if (nbreDeCasesMemeCouleur == 4) {
+                            gagnantTrouve = true;
+                        }
+                    }
+                }
+                else {
+                    nbreDeCasesMemeCouleur = 1;
+                    couleurPrecedente = plateauJeu[chaqueLigne][chaqueColonne];
+                }
+            }
+        }
+
+        if (gagnantTrouve) {
+            reponse.set(0, couleurPrecedente);
+        }
+
+        return reponse;
+
+    }
+
+    private ArrayList<String> verifierVerticales (String[][] plateauJeu) {
+
+        // la fonction retourne en position 0 les valeurs possibles suivantes :
+        //              jaune, rouge, ou "" pour dire que la partie n'est pas finie
+        // les positions 1, 2, 3, et 4 indiquent cellules gagnantes
+        ArrayList<String> reponse = new ArrayList<>();
+        String couleurPrecedente = "";
+        int nbreDeCasesMemeCouleur = 1;
+        boolean gagnantTrouve = false;
+        reponse.add(0, "");
+        reponse.add(1,"");
+        reponse.add(2,"");
+        reponse.add(3,"");
+        reponse.add(4,"");
+        String position = "";
+
+        for (int chaqueColonne = 0; chaqueColonne < 7 && !gagnantTrouve; chaqueColonne++) {
+            nbreDeCasesMemeCouleur = 1;
+            couleurPrecedente = plateauJeu[0][chaqueColonne];
+            position = "0" + chaqueColonne;
+            reponse.set(1, position);
+            for (int chaqueLigne = 1; chaqueLigne < 6 && !gagnantTrouve; chaqueLigne++) {
+                if (plateauJeu[chaqueLigne][chaqueColonne] == couleurPrecedente) {
+                    nbreDeCasesMemeCouleur ++;
+                    if (couleurPrecedente == "jaune" || couleurPrecedente == "rouge") {
+                        position = "" + chaqueLigne + chaqueColonne;
+                        reponse.set(nbreDeCasesMemeCouleur, position);
+                        if (nbreDeCasesMemeCouleur == 4) {
+                            gagnantTrouve = true;
+                        }
+                    }
+                }
+                else {
+                    nbreDeCasesMemeCouleur = 1;
+                    couleurPrecedente = plateauJeu[chaqueLigne][chaqueColonne];
+                }
+            }
+        }
+
+        if (gagnantTrouve) {
+            reponse.set(0, couleurPrecedente);
+        }
+
+        return reponse;
+
+    }
+
+    private ArrayList<String> verifierDiagonalesMontantes (String[][] plateauJeu) {
+
+        // la fonction retourne en position 0 les valeurs possibles suivantes :
+        //              jaune, rouge, ou "" pour dire que la partie n'est pas finie
+        // les positions 1, 2, 3, et 4 indiquent cellules gagnantes
+        ArrayList<String> reponse = new ArrayList<>();
+        String couleurPrecedente = "";
+        int nbreDeCasesMemeCouleur = 1;
+        boolean gagnantTrouve = false;
+        reponse.add(0, "");
+        reponse.add(1,"");
+        reponse.add(2,"");
+        reponse.add(3,"");
+        reponse.add(4,"");
+        String position = "";
+
+        for (int departLigne = 0; departLigne < 3 && !gagnantTrouve; departLigne++ ) {
+            int j = 0;
+            nbreDeCasesMemeCouleur = 1;
+            couleurPrecedente = plateauJeu[departLigne][0];
+            position = departLigne + "0";
+            reponse.set(1, position);
+            for (int i = departLigne+1; i < 6 && !gagnantTrouve; i++) {
+                j++;
+                if (plateauJeu[i][j] == couleurPrecedente) {
+                    nbreDeCasesMemeCouleur ++;
+                    if (couleurPrecedente == "jaune" || couleurPrecedente == "rouge") {
+                        position = "" + i + j;
+                        reponse.set(nbreDeCasesMemeCouleur, position);
+                        if (nbreDeCasesMemeCouleur == 4) {
+                            gagnantTrouve = true;
+                        }
+                    }
+                }
+                else {
+                    nbreDeCasesMemeCouleur = 1;
+                    couleurPrecedente = plateauJeu[i][j];
+                }
+            }
+        }
+
+        for (int departLigne = 1; departLigne < 4 && !gagnantTrouve; departLigne++ ) {
+            int i = 0;
+            nbreDeCasesMemeCouleur = 1;
+            couleurPrecedente = plateauJeu[i][departLigne];
+            position = "0" + departLigne;
+            reponse.set(1, position);
+            for (int j = departLigne+1; j < 7 && !gagnantTrouve; j++) {
+                i++;
+                if (plateauJeu[i][j] == couleurPrecedente) {
+                    nbreDeCasesMemeCouleur ++;
+                    if (couleurPrecedente == "jaune" || couleurPrecedente == "rouge") {
+                        position = "" + i + j;
+                        reponse.set(nbreDeCasesMemeCouleur, position);
+                        if (nbreDeCasesMemeCouleur == 4) {
+                            gagnantTrouve = true;
+                        }
+                    }
+                }
+                else {
+                    nbreDeCasesMemeCouleur = 1;
+                    couleurPrecedente = plateauJeu[i][j];
+                }
+            }
+        }
+
+        if (gagnantTrouve) {
+            reponse.set(0, couleurPrecedente);
+        }
+
+        return reponse;
+
+    }
+
+    private ArrayList<String> verifierDiagonalesDescendantes (String[][] plateauJeu) {
+
+        // la fonction retourne en position 0 les valeurs possibles suivantes :
+        //              jaune, rouge, finPartie (sans vainqueur), ou "" pour dire que la partie n'est pas finie
+        // les positions 1, 2, 3, et 4 indiquent cellules gagnantes
+        ArrayList<String> reponse = new ArrayList<>();
+        String couleurPrecedente = "";
+        int nbreDeCasesMemeCouleur = 1;
+        boolean gagnantTrouve = false;
+        reponse.add(0, "");
+        reponse.add(1,"");
+        reponse.add(2,"");
+        reponse.add(3,"");
+        reponse.add(4,"");
+        String position = "";
+
+        for (int departLigne = 3; departLigne < 6 && !gagnantTrouve; departLigne++ ) {
+            System.out.println("depart ligne = " + departLigne);
+            int j = 0;
+            nbreDeCasesMemeCouleur = 1;
+            couleurPrecedente = plateauJeu[departLigne][0];
+            position = departLigne + "0";
+            reponse.set(1, position);
+            for (int i = departLigne-1; i >= 0 && !gagnantTrouve; i--) {
+                System.out.println("couleur precedente : " + couleurPrecedente);
+                j++;
+                if (plateauJeu[i][j] == couleurPrecedente) {
+                    System.out.println("plateauJeu[i][j] : " + plateauJeu[i][j]);
+                    nbreDeCasesMemeCouleur ++;
+                    System.out.println("nbreDeCasesMemeCouleur : " + nbreDeCasesMemeCouleur);
+                    if (couleurPrecedente == "jaune" || couleurPrecedente == "rouge") {
+                        position = "" + i + j;
+                        reponse.set(nbreDeCasesMemeCouleur, position);
+                        if (nbreDeCasesMemeCouleur == 4) {
+                            gagnantTrouve = true;
+                        }
+                    }
+                }
+                else {
+                    nbreDeCasesMemeCouleur = 1;
+                    System.out.println("nbreDeCasesMemeCouleur : " + nbreDeCasesMemeCouleur);
+                    couleurPrecedente = plateauJeu[i][j];
+                }
+            }
+        }
+
+        for (int departLigne = 0; departLigne < 4 && !gagnantTrouve; departLigne++ ) {
+            int i = 6;
+            nbreDeCasesMemeCouleur = 1;
+            couleurPrecedente = plateauJeu[i-1][departLigne];
+            position = "5" + departLigne;
+            reponse.set(1, position);
+            for (int j = departLigne+1; j >= 7 && !gagnantTrouve; j++) {
+                i--;
+                if (plateauJeu[i][j] == couleurPrecedente) {
+                    nbreDeCasesMemeCouleur ++;
+                    if (couleurPrecedente == "jaune" || couleurPrecedente == "rouge") {
+                        position = "" + i + j;
+                        reponse.set(nbreDeCasesMemeCouleur, position);
+                        if (nbreDeCasesMemeCouleur == 4) {
+                            gagnantTrouve = true;
+                        }
+                    }
+                }
+                else {
+                    nbreDeCasesMemeCouleur = 1;
+                    couleurPrecedente = plateauJeu[i][j];
+                }
+            }
+        }
+
+        if (gagnantTrouve) {
+            reponse.set(0, couleurPrecedente);
+        }
+
+        return reponse;
+
+    }
 }

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class jeuPuissance4Servlet extends HttpServlet {
+public class jeuPuissance4ServletCopie extends HttpServlet {
 
     private String nomJoueurJaune;
     private String nomJoueurRouge;
@@ -93,101 +93,37 @@ public class jeuPuissance4Servlet extends HttpServlet {
                 "<div id=\"message\">"+
                 "<p>Bienvenue pour jouer à ce méga jeu<br /><br /></p>"+
                 "</div>"+
-                "</header>";
+                "</header>"+
 
-        // verifier s'il y a un gagnant
-        ArrayList<String> controleGagnant = plateau.verifierSiGagnant(plateauJeu);
-        if (controleGagnant.get(0).equals("")) {
-            // la partie continue
+                "<section>"+
 
-            form +=  "<section>"+
+                "<div id=\"reference_joueur\">"+
+                "<form method=\"get\" action=\"jeuPuissance4\">"+
+                "<fieldset>"+
+                "<legend>Choisissez votre colonne</legend>"+
+                "<p>Le joueur "+ joueur + " joue : </p>"+
+                "<label for=\"numero_colonne\">numéro colonne</label>"+
+                "<select name=\"numero_colonne\" id=\"numero_colonne\">"+
+                "<option value=\"0\">0</option>"+
+                "<option value=\"1\">1</option>"+
+                "<option value=\"2\">2</option>"+
+                "<option value=\"3\">3</option>"+
+                "<option value=\"4\">4</option>"+
+                "<option value=\"5\">5</option>"+
+                "<option value=\"6\">6</option>"+
+                "</select>"+
+                "<input type=\"submit\" value=\"valider\">"+
+                "</fieldset><br />"+
+                "</form>"+
+                "</div>"+
 
-                    "<div id=\"reference_joueur\">"+
-                    "<form method=\"get\" action=\"jeuPuissance4\">"+
-                    "<fieldset>"+
-                    "<legend>Choisissez votre colonne</legend>"+
-                    "<p>Le joueur "+ joueur + " joue : </p>"+
-                    "<label for=\"numero_colonne\">numéro colonne</label>"+
-                    "<select name=\"numero_colonne\" id=\"numero_colonne\">"+
-                    "<option value=\"0\">0</option>"+
-                    "<option value=\"1\">1</option>"+
-                    "<option value=\"2\">2</option>"+
-                    "<option value=\"3\">3</option>"+
-                    "<option value=\"4\">4</option>"+
-                    "<option value=\"5\">5</option>"+
-                    "<option value=\"6\">6</option>"+
-                    "</select>"+
-                    "<input type=\"submit\" value=\"valider\">"+
-                    "</fieldset><br />"+
-                    "</form>"+
-                    "</div>"+
+                plateauHTML +
 
-                    plateauHTML +
+                "</section>"+
 
-                    "</section>"+
+                "</body>"+
 
-                    "</body>"+
-
-                    "</html>";
-
-        }
-
-        if (controleGagnant.get(0).equals("jaune")) {
-            String gagnant = "la couleur jaune représentée fièrement par " + nomJoueurJaune;
-            form += "<section>"+
-
-                    "<div id=\"reference_joueur\">"+
-                    "Bravo !!! Le gagnant est : " + gagnant + "<br /></p>" +
-                    "<form method=\"get\" action=\"indexPuissance4\">"+
-                    "<input type=\"submit\" value=\"Recommencer\">"+
-                    "</form>"+
-                    "</div>"+
-
-                    plateauHTML +
-
-                    "</section>"+
-
-                    "</body>"+
-
-                    "</html>";
-        }
-
-        if (controleGagnant.get(0).equals("rouge")) {
-            String gagnant = "la couleur rouge représentée fièrement par " + nomJoueurRouge;
-            form += "<section>"+
-
-                    "<div id=\"reference_joueur\">"+
-                        "Bravo !!! Le gagnant est : " + gagnant + "<br /></p>" +
-                        "<form method=\"get\" action=\"indexPuissance4\">"+
-                            "<input type=\"submit\" value=\"Recommencer\">"+
-                        "</form>"+"<br />"+
-                    "</div>"+
-
-
-                    plateauHTML +
-
-                    "</section>"+
-
-                    "</body>"+
-
-                    "</html>";
-        }
-
-        if (controleGagnant.get(0).equals("finPartie")) {
-            form += "<section>"+
-
-                    "<div id=\"reference_joueur\">"+
-                    "Match nul !" +
-                    "</div>"+
-
-                    plateauHTML +
-
-                    "</section>"+
-
-                    "</body>"+
-
-                    "</html>";
-        }
+                "</html>";
 
         resp.getWriter().println(form);
 
@@ -210,3 +146,4 @@ public class jeuPuissance4Servlet extends HttpServlet {
     }
 
 }
+
