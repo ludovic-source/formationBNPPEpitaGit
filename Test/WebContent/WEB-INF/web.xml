@@ -26,6 +26,33 @@
 	    <url-pattern>/accueil</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+	    <servlet-name>ChargementFichier</servlet-name>	
+	    <servlet-class>com.octest.servlets.ChargementFichier</servlet-class>
+	    <multipart-config>
+            <location>C:/Users/stagiaire/Documents/OCR - JAVA EE/testsUpLoadtmp/</location>
+            <max-file-size>10485760</max-file-size> <!-- 10 Mo -->
+            <max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo -->
+            <file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+        </multipart-config>
+  </servlet>
+
+  <servlet-mapping>
+	    <servlet-name>ChargementFichier</servlet-name>
+	    <url-pattern>/chargementFichier</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+	    <servlet-name>TestSession</servlet-name>	
+	    <servlet-class>com.octest.servlets.TestSession</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+	    <servlet-name>TestSession</servlet-name>
+	    <url-pattern>/testSession</url-pattern>
+  </servlet-mapping>
+  
+  
   <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.octest.forms.ConnexionForm;
 
 @WebServlet("/Accueil")
 public class Accueil extends HttpServlet {
@@ -13,7 +14,7 @@ public class Accueil extends HttpServlet {
 
     public Accueil() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,8 +22,14 @@ public class Accueil extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		ConnexionForm form = new ConnexionForm();
+		
+		form.verifierIdentifiants(request);
+
+		request.setAttribute("form", form);
+		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/accueil.jsp").forward(request, response);
+		
 	}
 
 }
