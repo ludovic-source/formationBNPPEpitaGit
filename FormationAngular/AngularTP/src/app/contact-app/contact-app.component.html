@@ -1,0 +1,55 @@
+<div class="flex-row d-flex justify-content-between mr-3 mt-1">
+    <h3>20 contact(s)</h3>
+    <div>
+        <button type="button" class="btn btn-outline-secondary ml-1 border-success text-success">Grille</button>
+        <button type="button" class="btn btn-outline-secondary ml-1 text-secondary">Trier par nom</button>
+        <button type="button" class="btn btn-dark ml-1" (click)="editerContact()">+ Ajouter</button>
+    </div>    
+</div>
+
+<div class="mb-2">
+    <form *ngIf="editionContact === true" (ngSubmit)="ajouterContact(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="texte" class="form-control" id="nom" name="nom" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="prenom">Prénom</label>
+          <input type="texte" class="form-control" id="prenom" name="prenom" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="expression">Expression</label>
+            <input type="texte" class="form-control" id="expression" name="expression" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="telephone">Telephone</label>
+            <input type="texte" class="form-control" id="telephone" name="telephone" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="prime">Prime</label>
+            <input type="texte" class="form-control" id="prime" name="prime" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="bateau">Bateau</label>
+            <input type="texte" class="form-control" id="bateau" name="bateau" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Ajouter le contact</button>
+    </form>
+</div>
+
+<ul class="list-group mr-3 mt-1l">
+    <li class="list-group-item d-flex justify-content-between align-items-center pb-0 pt-0 pr-0 pl-0">
+        <input type="texte" id="input-recherche" class="form-control" [formControl]="searchControl" placeholder="Rechercher...">
+    </li>
+    <li class="list-group-item d-flex justify-content-start align-items-center" *ngFor="let contact of listeContactsFiltres">
+        <img class="mb-3" src="/assets/images/remove_16px.png" (click)="supprimerContact(contact)">
+        <figure class="vignette ml-4">
+            <img src="/assets/images/Luffy.jpg" routerLink="contact/{{ contact.prenom }}">
+        </figure>        
+        <p class="ml-4 flex-grow-1">{{ contact.prenom }} {{ contact.nom }}</p>
+        <p class="mr-3">Ajouté le {{ contact.dateAjout | date: 'd MMMM y' }}</p>
+        <img class="mb-3"src="/assets/images/star_plein_16px.png" (click)="deleteFavori(contact)" *ngIf="contact.favori === true">     
+        <img class="mb-3"src="/assets/images/star_vide_16px.png" (click)="ajoutFavori(contact)" *ngIf="contact.favori === false">
+    </li>
+</ul>
+

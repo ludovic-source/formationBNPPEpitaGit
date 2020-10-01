@@ -1,0 +1,11 @@
+<div class="todo">
+    <h1>TO DO</h1>
+
+    <ul>
+        <li *ngFor="let tache of listeDesTachesToDo">
+            <p>{{ tache.nom }}</p>
+            <button (click)="doneTache(tache.nom)">Done</button>
+        </li>
+    </ul>
+
+</div>    

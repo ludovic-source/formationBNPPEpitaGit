@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <h4 class="text-center">Favoris</h4>
+    
+    <hr class="my-4">
+    <div class="card">
+        <ul class="list-group list-group-flush">
+            <ng-container *ngFor="let contact of listeContacts">
+                <a class="list-group-item d-flex justify-content-between" routerLink="contact/{{ contact.prenom }}" *ngIf="contact.favori === true">
+                    <span>{{ contact.prenom }}</span>
+                    <span>></span>
+                </a>
+            </ng-container>    
+        </ul>
+    </div>
+
+  </div>

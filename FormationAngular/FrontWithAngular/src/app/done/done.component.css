@@ -1,0 +1,26 @@
+.done{
+    min-width: 400px;
+    border: 5px solid blue;
+}
+
+ul{
+    padding-left: 0;
+}
+
+li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+    background-color: rgb(187, 244, 248);
+}
+
+h1{
+    text-align: center;
+}

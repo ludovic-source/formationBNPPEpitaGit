@@ -1,0 +1,25 @@
+<!--
+<p>nbre de surprises {{ nbreSurprise }}</p>
+
+<button (click)="clickSurprise()">Surprise !</button>
+
+<p *ngIf="getSurprise() === true">surprise : {{ message }}</p>
+-->
+
+<section>
+
+    <p>Hello SIMPLE TODO LIST / Auteur : Luffy D Monkey</p>
+
+    <div class="menu">
+        <button (click)="addTache()">Ajouter une tache à la liste</button>
+        <button (click)="vider()">Vider la liste</button>
+    </div>
+
+    <div class="todolist">
+        <app-todo (doneEvent)="actualiser()" [listeDesTachesToDo]="listeDesTaches"></app-todo>
+        <app-done (deleteEvent)="actualiser()" [listeDesTachesDone]="listeDesTaches"></app-done>
+    </div>
+
+</section>
+
+

@@ -1,0 +1,11 @@
+<div class="done">
+    <h1>DONE</h1>
+
+    <ul>
+        <li *ngFor="let tache of listeDesTachesDone">
+            <img src="/assets/images/delete_20px.png" (click)="deleteTache(tache.nom)">
+            <p>{{ tache.nom }}</p>
+        </li>
+    </ul>
+
+</div> 
