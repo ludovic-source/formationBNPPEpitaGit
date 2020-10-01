@@ -41,15 +41,52 @@
     <li class="list-group-item d-flex justify-content-between align-items-center pb-0 pt-0 pr-0 pl-0">
         <input type="texte" id="input-recherche" class="form-control" [formControl]="searchControl" placeholder="Rechercher...">
     </li>
-    <li class="list-group-item d-flex justify-content-start align-items-center" *ngFor="let contact of listeContactsFiltres">
-        <img class="mb-3" src="/assets/images/remove_16px.png" (click)="supprimerContact(contact)">
-        <figure class="vignette ml-4">
-            <img src="/assets/images/Luffy.jpg" routerLink="contact/{{ contact.prenom }}">
-        </figure>        
-        <p class="ml-4 flex-grow-1">{{ contact.prenom }} {{ contact.nom }}</p>
-        <p class="mr-3">Ajouté le {{ contact.dateAjout | date: 'd MMMM y' }}</p>
-        <img class="mb-3"src="/assets/images/star_plein_16px.png" (click)="deleteFavori(contact)" *ngIf="contact.favori === true">     
-        <img class="mb-3"src="/assets/images/star_vide_16px.png" (click)="ajoutFavori(contact)" *ngIf="contact.favori === false">
-    </li>
+    <ng-container *ngFor="let contact of listeContactsFiltres; let indexContact = index">
+        <li class="list-group-item d-flex justify-content-start align-items-center" 
+            *ngIf="indexContact >= numeroPageEnCours * nbreContactsParPage - nbreContactsParPage
+                && indexContact < numeroPageEnCours * nbreContactsParPage">
+            <img class="mb-3" src="/assets/images/remove_16px.png" (click)="supprimerContact(contact)">
+            <figure class="vignette ml-4">
+                <img src="/assets/images/Luffy.jpg" routerLink="contact/{{ contact.prenom }}">
+            </figure>        
+            <p class="ml-4 flex-grow-1">{{ contact.prenom }} {{ contact.nom }}</p>
+            <p class="mr-3">Ajouté le {{ contact.dateAjout | date: 'd MMMM y' }}</p>
+            <img class="mb-3"src="/assets/images/star_plein_16px.png" (click)="deleteFavori(contact)" *ngIf="contact.favori === true">     
+            <img class="mb-3"src="/assets/images/star_vide_16px.png" (click)="ajoutFavori(contact)" *ngIf="contact.favori === false">  
+        </li>
+    </ng-container>      
 </ul>
+
+<nav aria-label="...">
+    <ul class="pagination justify-content-center mt-2">
+        <li class="page-item disabled" *ngIf="numeroPageEnCours == 1">
+            <a class="page-link" aria-disabled="true">Précédente</a>
+        </li>
+        <li class="page-item" *ngIf="numeroPageEnCours > 1">
+            <a class="page-link" (click)="afficherPagePrecedente()">Précédente</a>
+        </li>
+        <ng-container *ngFor="let contact of listeContactsFiltres; let indexContact=index">
+            <li class="page-item active" *ngIf="indexContact / nbreContactsParPage + 1 == numeroPageEnCours">
+                <ng-container *ngIf="(indexContact < nbreContactsFiltres) 
+                                    && ((indexContact + nbreContactsParPage) % nbreContactsParPage == 0)">
+                    <a class="page-link" 
+                    (click)="afficherPage(indexContact / nbreContactsParPage + 1)">{{ indexContact / nbreContactsParPage + 1 }}</a>
+                </ng-container>
+            </li>
+            <li class="page-item" *ngIf="indexContact / nbreContactsParPage + 1 != numeroPageEnCours">
+                <ng-container *ngIf="(indexContact < nbreContactsFiltres) 
+                                    && ((indexContact + nbreContactsParPage) % nbreContactsParPage == 0)">
+                    <a class="page-link" 
+                    (click)="afficherPage(indexContact / nbreContactsParPage + 1)">{{ indexContact / nbreContactsParPage + 1 }}</a>
+                </ng-container>
+            </li>
+        </ng-container>        
+        <li class="page-item" *ngIf="numeroPageEnCours < nbreContactsFiltres / nbreContactsParPage">
+            <a class="page-link" (click)="afficherPageSuivante()">Suivante</a>
+        </li>
+        <li class="page-item disabled" *ngIf="numeroPageEnCours > nbreContactsFiltres / nbreContactsParPage">
+            <a class="page-link" aria-disabled="true">Suivante</a>
+        </li>
+    </ul>
+  </nav>
 

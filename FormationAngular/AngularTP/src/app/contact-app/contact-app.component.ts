@@ -20,6 +20,11 @@ export class ContactAppComponent implements OnInit {
 
     public searchControl: FormControl;  // pour la barre de recherche
 
+    // pour la pagination
+    nbreContactsParPage = 4;
+    nbreContactsFiltres: number;
+    numeroPageEnCours: number;
+
     constructor(private contactService: ContactService) { 
         this.searchControl = new FormControl();     // pour la barre de recherche
     }
@@ -31,8 +36,8 @@ export class ContactAppComponent implements OnInit {
                                       });
         this.contactService.emitListeContactsFiltresSubject();
         this.getAllContacts();
-        this.editionContact = false;
-        
+        this.editionContact = false; 
+        this.numeroPageEnCours = 1;       
     }
 
     // async permet d'attendre la liste des contacts avant d'initialiser l'observable pour la recherce
@@ -41,13 +46,15 @@ export class ContactAppComponent implements OnInit {
         console.log("response = " + response);
         if (response) {
             this.listeContactsFiltres = response; 
-            this.contactService.emitListeContactsFiltresSubject(); 
+            this.contactService.emitListeContactsFiltresSubject();
+            this.nbreContactsFiltres = this.listeContactsFiltres.length; 
             // pour la barre de recherche  
             this.contactService.getFilteredContacts(""); 
             this.searchControl.valueChanges
                 .pipe(debounceTime(700))
                 .subscribe(search => {
                     this.contactService.getFilteredContacts(search.toLowerCase());
+                    this.nbreContactsFiltres = this.listeContactsFiltres.length;
             });
         }    
     }
@@ -62,6 +69,8 @@ export class ContactAppComponent implements OnInit {
 
     supprimerContact(contact) {
         this.contactService.suprimerContact(contact);
+        this.nbreContactsFiltres -= 1;
+        this.numeroPageEnCours = 1;
     }
 
     editerContact() {
@@ -81,6 +90,25 @@ export class ContactAppComponent implements OnInit {
         contact.dateAjout = new Date();
         this.contactService.ajouterContact(contact);
         this.editionContact = false;
+        this.nbreContactsFiltres += 1;        
+        this.numeroPageEnCours = 1;
+    }
+
+    afficherPage(numeroPage: number) {
+        this.numeroPageEnCours = numeroPage;
+    }
+
+    afficherPageSuivante() {
+        let nbrePagesMax = this.nbreContactsFiltres / this.nbreContactsParPage;
+        if (this.numeroPageEnCours < nbrePagesMax) {
+            this.numeroPageEnCours += 1;
+        }
+    }
+
+    afficherPagePrecedente() {
+        if (this.numeroPageEnCours > 1) {
+            this.numeroPageEnCours -= 1;
+        }
     }
 
 }

@@ -57,7 +57,7 @@ export class ContactService {
     }
 
     ajoutFavori(contact) {
-        var index = this.listeContacts.indexOf(contact);
+        let index = this.listeContacts.indexOf(contact);
         if (index != null) {
             this.listeContacts[index].favori = true;
             this.emitListeContactsSubject(); 
@@ -70,7 +70,7 @@ export class ContactService {
     }
 
     deleteFavori(contact) {
-        var index = this.listeContacts.indexOf(contact);
+        let index = this.listeContacts.indexOf(contact);
         if (index != null) {
             this.listeContacts[index].favori = false;
             this.emitListeContactsSubject(); 
@@ -83,7 +83,7 @@ export class ContactService {
     }
 
     ajouterContact(contact) {
-        var index = this.listeContacts.indexOf(contact);
+        let index = this.listeContacts.indexOf(contact);
         this.listeContacts.push(contact);
         this.emitListeContactsSubject(); 
         index = this.listeContactsFiltres.indexOf(contact);
@@ -92,7 +92,7 @@ export class ContactService {
     }
 
     suprimerContact(contact) {
-        var index = this.listeContacts.indexOf(contact);
+        let index = this.listeContacts.indexOf(contact);
         if (index != -1) {
             this.listeContacts.splice(index, 1);
             this.emitListeContactsSubject(); 
