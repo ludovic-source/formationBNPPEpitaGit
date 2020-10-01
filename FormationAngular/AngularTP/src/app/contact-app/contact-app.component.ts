@@ -30,21 +30,26 @@ export class ContactAppComponent implements OnInit {
                                 this.listeContactsFiltres = listeContacts;
                                       });
         this.contactService.emitListeContactsFiltresSubject();
-        this.contactService.getAllContacts();
+        this.getAllContacts();
         this.editionContact = false;
-
-        // pour la barre de recherche
-        setTimeout(
-            () => {
-                this.contactService.getFilteredContacts(""); 
-                this.searchControl.valueChanges
-                    .pipe(debounceTime(700))
-                    .subscribe(search => {
-                        this.contactService.getFilteredContacts(search.toLowerCase());
-                  });
-            }, 5000
-          );
         
+    }
+
+    // async permet d'attendre la liste des contacts avant d'initialiser l'observable pour la recherce
+    async getAllContacts() {
+        let response:any = await this.contactService.getAllContactsPromise();
+        console.log("response = " + response);
+        if (response) {
+            this.listeContactsFiltres = response; 
+            this.contactService.emitListeContactsFiltresSubject(); 
+            // pour la barre de recherche  
+            this.contactService.getFilteredContacts(""); 
+            this.searchControl.valueChanges
+                .pipe(debounceTime(700))
+                .subscribe(search => {
+                    this.contactService.getFilteredContacts(search.toLowerCase());
+            });
+        }    
     }
 
     ajoutFavori(contact) {

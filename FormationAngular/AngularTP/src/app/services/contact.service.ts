@@ -40,6 +40,13 @@ export class ContactService {
         ); 
     }
 
+    async getAllContactsPromise() {
+        return this.httpClient
+            .get<any>(this.url + 'contacts/all/')
+            .toPromise();
+        ; 
+    }
+
     getFilteredContacts(searchContact) {
         console.log("searchContact: " + searchContact);
         this.listeContactsFiltres = this.listeContacts.filter( contact =>
