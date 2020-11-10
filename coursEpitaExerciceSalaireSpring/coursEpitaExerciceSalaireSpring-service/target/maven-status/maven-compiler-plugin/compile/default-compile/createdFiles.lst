@@ -1,0 +1,8 @@
+com\epita\coursEpitaExerciceSalaireSpring\service\ServiceAdresseImpl.class
+com\epita\coursEpitaExerciceSalaireSpring\service\IServiceRemunerationAnnuelle.class
+com\epita\coursEpitaExerciceSalaireSpring\service\IServicePersonne.class
+com\epita\coursEpitaExerciceSalaireSpring\service\ServicePersonneImpl.class
+com\epita\coursEpitaExerciceSalaireSpring\service\IServiceAdresse.class
+com\epita\coursEpitaExerciceSalaireSpring\service\ServiceRemunerationImpl.class
+com\epita\coursEpitaExerciceSalaireSpring\service\IServiceEntreprise.class
+com\epita\coursEpitaExerciceSalaireSpring\service\ServiceEntrepriseImpl.class

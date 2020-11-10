@@ -13,7 +13,9 @@ public class Test {
         // FenetreCalculatrice fenetre = new FenetreCalculatrice();
         // FenetreFormulaire fenetreFormulaire = new FenetreFormulaire();
         // FenetreFormulaireTexte fenetre = new FenetreFormulaireTexte();
-        ArdoiseMagique ardoiseMagique = new ArdoiseMagique();
+        //ArdoiseMagique ardoiseMagique = new ArdoiseMagique();
+        //FenetreAvecOnglet fenetre = new FenetreAvecOnglet();
+        FenetreArbre fenetreArbre = new FenetreArbre();
 
     }
 }

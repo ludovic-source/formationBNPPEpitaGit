@@ -1,0 +1,4 @@
+com\epita\coursEpitaExerciceSalaireSpring\dao\IDaoAdresse.class
+com\epita\coursEpitaExerciceSalaireSpring\dao\IDaoEntreprise.class
+com\epita\coursEpitaExerciceSalaireSpring\dao\IDaoRemunerationAnnuelle.class
+com\epita\coursEpitaExerciceSalaireSpring\dao\IDaoPersonne.class

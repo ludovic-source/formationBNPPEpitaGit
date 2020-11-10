@@ -1,0 +1,5 @@
+interface AvecChauffage {
+
+    void chauffer();
+
+}

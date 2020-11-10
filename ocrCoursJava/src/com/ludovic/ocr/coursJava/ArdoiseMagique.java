@@ -34,6 +34,9 @@ public class ArdoiseMagique extends JFrame {
     private FormeListener formeListener = new FormeListener();
     private CouleurListener couleurListener = new CouleurListener();
 
+    // ZONE DE DESSIN
+    private PanneauArdoise dessin = new PanneauArdoise();
+
     public ArdoiseMagique () {
 
         this.setTitle("Ardoise magique");
@@ -47,6 +50,8 @@ public class ArdoiseMagique extends JFrame {
         // on initialise la barre d'outils
         initToolBar();
 
+        //On positionne notre zone de dessin
+        this.getContentPane().add(dessin, BorderLayout.CENTER);
 
         this.setVisible(true);
 
@@ -104,6 +109,49 @@ public class ArdoiseMagique extends JFrame {
         menuBar.setFont(police);
         this.setJMenuBar(menuBar);
 
+        // ajout des ecouteurs "effacer"
+        fichierItem1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0) {
+                dessin.erase();
+            }
+        });
+
+        // ajout des ecouteurs "quitter"
+        fichierItem2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0) {
+                System.exit(0);
+            }
+        });
+
+        // ajout des ecouteurs "forme"
+        editionFormeItem1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0) {
+                dessin.setPointerType("ROND");
+            }
+        });
+        editionFormeItem2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0) {
+                dessin.setPointerType("CARRE");
+            }
+        });
+
+        // ajout des ecouteurs "couleur"
+        editionCouleurItem1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0) {
+                dessin.setPointerColor(Color.red);
+            }
+        });
+        editionCouleurItem2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0) {
+                dessin.setPointerColor(Color.green);
+            }
+        });
+        editionCouleurItem3.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0) {
+                dessin.setPointerColor(Color.blue);
+            }
+        });
+
         this.add(toolBar, BorderLayout.NORTH);
 
     }
@@ -112,7 +160,22 @@ public class ArdoiseMagique extends JFrame {
         public void actionPerformed(ActionEvent e) {
 
             System.out.println("la forme choisie est : " + e.getSource());
-
+            if(e.getSource().getClass().getName().equals("javax.swing.JMenuItem")){
+                if(e.getSource()== carreNoir) {
+                    dessin.setPointerType("CARRE");
+                }
+                else {
+                    dessin.setPointerType("ROND");
+                }
+            }
+            else{
+                if(e.getSource()== carreNoir) {
+                    dessin.setPointerType("CARRE");
+                }
+                else {
+                    dessin.setPointerType("ROND");
+                }
+            }
         }
     }
 
@@ -120,7 +183,33 @@ public class ArdoiseMagique extends JFrame {
         public void actionPerformed(ActionEvent e) {
 
             System.out.println("la couleur choisie est : " + e.getSource());
-
+            if(e.getSource().getClass().getName().equals("javax.swing.JMenuItem")) {
+                System.out.println("OK !");
+                if (e.getSource() == carreVert) {
+                    dessin.setPointerColor(Color.green);
+                }
+                else {
+                    if (e.getSource() == carreBleu) {
+                        dessin.setPointerColor(Color.blue);
+                    }
+                    else {
+                        dessin.setPointerColor(Color.red);
+                    }
+                }
+            }
+            else {
+                if(e.getSource()== carreVert) {
+                    dessin.setPointerColor(Color.green);
+                }
+                else {
+                    if (e.getSource() == carreBleu) {
+                        dessin.setPointerColor(Color.blue);
+                    }
+                    else {
+                        dessin.setPointerColor(Color.red);
+                    }
+                }
+            }
         }
     }
 

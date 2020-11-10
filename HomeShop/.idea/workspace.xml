@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="HomeShop" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -15,25 +18,37 @@
       </list>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1ZLBECkordrWswa47H7Qa4vTGrM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\stagiaire\IdeaProjects\HomeShop\src\main\java" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.cursan.HomeShop.web" />
       <recent name="com.cursan.HomeShop" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cursan.HomeShop.Main" />
       <module name="HomeShop" />
@@ -47,11 +62,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HomeShop [war:war]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="war:war" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Maven.HomeShop [war:war]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -67,47 +112,93 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="179" key="#Project_Structure" timestamp="1584608517906">
+    <state x="552" y="179" key="#Project_Structure" timestamp="1585056322593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="179" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1584608517906" />
+    <state x="552" y="179" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1585056322593" />
+    <state x="552" y="179" key="#Scopes" timestamp="1585056840207">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Scopes/0.0.1920.1040@0.0.1920.1040" timestamp="1585056840207" />
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585054590970">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585054590970" />
     <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser" timestamp="1584710619641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="612" y="188" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584710619641" />
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584695653101" />
+    <state x="683" y="210" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1585054802906">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="683" y="210" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585054802906" />
+    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584968729693">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584968729693" />
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584707410859">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584707410859" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1584716567106">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584716567106" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1584716567106">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584716567106" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1584716567106">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584716567106" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1584716567106">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584716567106" />
-    <state x="277" y="56" key="SettingsEditor" timestamp="1584624284725">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584624284725" />
-    <state x="579" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1584693204440">
+    <state x="686" y="212" key="FileChooserDialogImpl" timestamp="1585056309125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="463" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584623984559" />
-    <state x="579" y="298" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584693204440" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584984714127" />
+    <state x="686" y="212" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585056309125" />
+    <state width="1877" height="477" key="GridCell.Tab.0.bottom" timestamp="1585071917869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="187" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584984870792" />
+    <state width="1877" height="477" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585071917869" />
+    <state width="1877" height="477" key="GridCell.Tab.0.center" timestamp="1585071917869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="187" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584984870792" />
+    <state width="1877" height="477" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585071917869" />
+    <state width="1877" height="477" key="GridCell.Tab.0.left" timestamp="1585071917869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="187" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584984870792" />
+    <state width="1877" height="477" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585071917869" />
+    <state width="1877" height="477" key="GridCell.Tab.0.right" timestamp="1585071917869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="187" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584984870792" />
+    <state width="1877" height="477" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585071917869" />
+    <state x="490" y="176" key="Maven.ArtifactSearchDialog" timestamp="1585072930175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="176" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585072930175" />
+    <state width="254" height="198" key="RunAnythingAction_Filter_Popup" timestamp="1585073005831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="254" height="198" key="RunAnythingAction_Filter_Popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585073005831" />
+    <state x="346" y="71" key="SettingsEditor" timestamp="1585057159013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584624284725" />
+    <state x="346" y="71" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585057159013" />
+    <state x="579" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1585124973775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584984006148" />
+    <state x="579" y="298" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585124973775" />
+    <state x="429" y="213" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1584970759614">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="429" y="213" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584970759614" />
     <state x="731" y="224" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584694587552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="224" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584694587552" />
+    <state x="342" y="141" key="new project wizard" timestamp="1585125022658">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="141" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585125022658" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1585073005831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585073005831" />
   </component>
 </project>

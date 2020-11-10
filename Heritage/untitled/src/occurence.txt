@@ -1,0 +1,43 @@
+tu: 2
+de: 2
+oublie: 1
+milliers: 1
+moi: 1
+est: 1
+cause: 1
+descendras: 1
+mon: 1
+mais: 1
+avoir: 1
+noël: 1
+du: 1
+petit: 2
+des: 1
+papa: 1
+si: 1
+un: 1
+dois: 1
+quand: 1
+avant: 1
+bien: 1
+jouets: 1
+par: 1
+à: 1
+peu: 1
+faudra: 1
+ciel: 1
+pas: 1
+il: 1
+c: 1
+froid: 1
+dehors: 1
+n: 1
+te: 1
+couvrir: 1
+partir: 1
+soulier: 1
+avec: 1
+nombre de mots différents = 39
+nombre de mots différents = 39
+nombre de mots différents = 39
+nombre de mots différents = 39

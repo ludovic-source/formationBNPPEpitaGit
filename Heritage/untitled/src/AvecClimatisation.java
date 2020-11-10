@@ -1,0 +1,5 @@
+interface AvecClimatisation {
+
+    void refroidir();
+
+}

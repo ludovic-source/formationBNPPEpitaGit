@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="200.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.testfx.personnes.view.PersonneMapping">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="200.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="personneTable" layoutX="-43.0" layoutY="-16.0" prefHeight="198.0" prefWidth="145.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="nomColonne" prefWidth="75.0" text="NOM" />
+                      <TableColumn fx:id="prenomColonne" prefWidth="75.0" text="PRENOM" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <BorderPane layoutX="74.0" layoutY="14.0" prefHeight="198.0" prefWidth="347.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <Label text="Informations" BorderPane.alignment="TOP_LEFT" />
+                     </top>
+                     <bottom>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <buttons>
+                            <Button mnemonicParsing="false" onAction="#supprimerPersonne" text="Supprimer" />
+                              <Button mnemonicParsing="false" text="Editer" />
+                          </buttons>
+                        </ButtonBar>
+                     </bottom>
+                     <center>
+                        <GridPane BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Nom :" />
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Prénom" GridPane.rowIndex="1" />
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Date de naissance :" GridPane.rowIndex="2" />
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Sexe" GridPane.rowIndex="3" />
+                              <Label fx:id="nomValeur" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="NomValue" GridPane.columnIndex="1" />
+                              <Label fx:id="prenomValeur" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="PrenomValue" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="dateValeur" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="DateValue" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="sexeValeur" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="SexeValue" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

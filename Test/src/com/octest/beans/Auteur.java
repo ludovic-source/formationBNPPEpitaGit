@@ -6,7 +6,7 @@ public class Auteur {
 	private String prenom;
 	private boolean actif;
 	
-	public String getNom() {
+	public String getNom() {		
 		return nom;
 	}
 	public void setNom(String nom) {
@@ -26,5 +26,6 @@ public class Auteur {
 	}
 	
 	
-
+	
+	
 }
