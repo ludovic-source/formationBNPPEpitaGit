@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="755e7721-5af3-48dd-844d-4cad0da4a33c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="216" />
+  </component>
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cqY3fdU1x66G8xtTrFAGhl7CZT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../ProjetPortail/portailCI" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ludovic" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestsTDDExercice2.verifier_fonctionnement_avec_separateur_personnalise">
+    <configuration name="TestsTDDExercice2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="courTestBNPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ludovic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ludovic" />
+      <option name="MAIN_CLASS_NAME" value="com.ludovic.TestsTDDExercice2" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsTDDExercice2.verifier_fonctionnement_avec_separateur_personnalise" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="courTestBNPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ludovic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ludovic" />
+      <option name="MAIN_CLASS_NAME" value="com.ludovic.TestsTDDExercice2" />
+      <option name="METHOD_NAME" value="verifier_fonctionnement_avec_separateur_personnalise" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsTDDExercice2.verifier_methode_add_avec_string_en_entree_2_nbres_max" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="courTestBNPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ludovic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ludovic" />
+      <option name="MAIN_CLASS_NAME" value="com.ludovic.TestsTDDExercice2" />
+      <option name="METHOD_NAME" value="verifier_methode_add_avec_string_en_entree_2_nbres_max" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsTDDExercice2.verifier_si_entree_methode_add_valide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="courTestBNPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ludovic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ludovic" />
+      <option name="MAIN_CLASS_NAME" value="com.ludovic.TestsTDDExercice2" />
+      <option name="METHOD_NAME" value="verifier_si_entree_methode_add_valide" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsTDDExercice2.verifier_si_pas_de_separateur_en_fin_de_chaine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="courTestBNPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ludovic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ludovic" />
+      <option name="MAIN_CLASS_NAME" value="com.ludovic.TestsTDDExercice2" />
+      <option name="METHOD_NAME" value="verifier_si_pas_de_separateur_en_fin_de_chaine" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestsTDDExercice2.verifier_fonctionnement_avec_separateur_personnalise" />
+        <item itemvalue="JUnit.TestsTDDExercice2" />
+        <item itemvalue="JUnit.TestsTDDExercice2.verifier_methode_add_avec_string_en_entree_2_nbres_max" />
+        <item itemvalue="JUnit.TestsTDDExercice2.verifier_si_pas_de_separateur_en_fin_de_chaine" />
+        <item itemvalue="JUnit.TestsTDDExercice2.verifier_si_entree_methode_add_valide" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="755e7721-5af3-48dd-844d-4cad0da4a33c" name="Default Changelist" comment="" />
+      <created>1591257392528</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591257392528</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1591607958925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1591607958925" />
+    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1591621479884">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591621479884" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1594314970136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594314970136" />
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1591701277896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591701277896" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1591701277896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591701277896" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1591701277896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591701277896" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1591701277896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591701277896" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1593499221789">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593499221789" />
+    <state x="594" y="241" key="export.test.results" timestamp="1591270500599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="594" y="241" key="export.test.results/0.0.1536.824@0.0.1536.824" timestamp="1591270500599" />
+    <state x="209" y="109" key="new project wizard" timestamp="1591687132198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="109" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1591687132198" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1591621288477">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1591621288477" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/courTestBNPP$App.ic" NAME="App Coverage Results" MODIFIED="1591597713579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ludovic.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/courTestBNPP$All_in_courTestBNPP.ic" NAME="All in courTestBNPP Coverage Results" MODIFIED="1591597876096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
